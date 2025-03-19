@@ -1,1 +1,8 @@
 version: 2
+
+sources:
+  - name: tiktok_raw
+    schema: tiktok_raw
+    tables:
+      - name: campaign_report_daily
+        identifier: campaign_report_daily
