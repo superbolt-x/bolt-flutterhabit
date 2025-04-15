@@ -12,7 +12,7 @@ packages:
     revision: main
 
   - git: "https://github.com/superbolt-x/bolt-dbt-tiktok-package.git"
-    revision: main
+    revision: migration_supermetrics_to_fivetran
 
   - git: "https://github.com/superbolt-x/bolt-dbt-pinterest-package.git"
     revision: main
