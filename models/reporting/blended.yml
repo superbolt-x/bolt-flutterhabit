@@ -1,8 +1,24 @@
 version: 2
 
 sources:
+  
   - name: tiktok_raw
     schema: tiktok_raw
     tables:
       - name: campaign_report_daily
         identifier: campaign_report_daily
+
+  - name: reporting
+    schema: reporting
+    tables:
+      - name: facebook_ad_performance
+        identifier: flutterhabit_facebook_ad_performance
+
+      - name: googleads_campaign_performance
+        identifier: flutterhabit_googleads_campaign_performance
+      
+      - name: tiktok_campaign_performance
+        identifier: flutterhabit_tiktok_campaign_performance
+
+      - name: bingads_campaign_performance
+        identifier: flutterhabit_bingads_campaign_performance
