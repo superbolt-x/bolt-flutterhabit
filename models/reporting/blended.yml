@@ -22,3 +22,10 @@ sources:
 
       - name: bingads_campaign_performance
         identifier: flutterhabit_bingads_campaign_performance
+
+  - name: googleads_raw
+    schema: googleads_raw
+    tables:
+      - name: campaign_convtype_performance_report
+        identifier: campaign_convtype_performance_report
+
