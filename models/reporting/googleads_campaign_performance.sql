@@ -13,8 +13,8 @@ date_granularity,
 spend,
 impressions,
 clicks,
-conversions as purchases,
-conversions_value as revenue,
+raw.purchases,
+raw.revenue,
 search_impression_share,
 search_budget_lost_impression_share,
 search_rank_lost_impression_share
@@ -54,4 +54,5 @@ LEFT JOIN
     FROM {{ source('googleads_raw','campaign_convtype_performance_report') }}
     WHERE conversion_action_name = 'Google Shopping App Purchase (1)'
     GROUP BY 1,2,3,4,5
-    ) USING (date,date_granularity,account_id,campaign_name,campaign_id)
+    ) raw
+USING (date,date_granularity,account_id,campaign_name,campaign_id)
