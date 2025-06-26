@@ -21,7 +21,7 @@ search_rank_lost_impression_share
 FROM {{ ref('googleads_performance_by_campaign') }}
 LEFT JOIN
     (SELECT DATE_TRUNC('day',date) as date, 'day' as date_granularity, 
-    customer_id as account_id, name as campaign_name, campaign_id,
+    customer_id as account_id, name as campaign_name, id as campaign_id,
     COALESCE(SUM(conversions),0) as purchases_adj, COALESCE(SUM(conversions_value),0) as revenue_adj
     FROM {{ source('googleads_raw','campaign_convtype_performance_report') }}
     WHERE conversion_action_name = 'Google Shopping App Purchase (1)'
