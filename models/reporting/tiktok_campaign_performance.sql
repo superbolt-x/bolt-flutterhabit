@@ -7,7 +7,7 @@
 with tiktok_data as (
     SELECT 
     campaign_name,
-    campaign_id::varchar,
+    campaign_id::varchar as campaign_id,
     campaign_status,
     campaign_type_default,
     date,
