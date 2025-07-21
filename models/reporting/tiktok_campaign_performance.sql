@@ -25,7 +25,7 @@ with tiktok_data as (
 , {{ granularity }}_agg_gmv as (
     select 
         campaign_name,
-        campaign_id,
+        campaign_id::varchar,
         '(not set)' as campaign_status,
         '(not set)' as campaign_type_default,
         date_trunc('{{ granularity }}', date) as date,
