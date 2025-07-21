@@ -7,15 +7,15 @@
 with tiktok_data as (
     SELECT 
     campaign_name,
-    campaign_id::varchar,
+    campaign_id::varchar as campaign_id,
     campaign_status,
     campaign_type_default,
     adgroup_name,
-    adgroup_id,
+    adgroup_id::varchar as adgroup_id,
     adgroup_status,
     audience,
     ad_name,
-    ad_id,
+    ad_id::varchar as ad_id,
     ad_status,
     visual,
     date,
